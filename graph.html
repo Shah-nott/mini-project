@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data and Energy Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background color */
+        }
+        .header {
+            color: blue; /* Blue text color */
+            background-color: #000; /* Black background color */
+            font-size: 24px;
+            text-align: center;
+            padding: 20px 0;
+        }
+        #graphTitle {
+            color: yellow; /* Yellow text color */
+            text-align: center;
+            margin-top: 20px; /* Adjust as needed */
+            margin-bottom: 10px; /* Space before the graph canvas */
+        }
+        .logo-corner {
+            position: absolute;
+            top: 5px;
+            width: 100px; /* or any size that fits well */
+        }
+        .logo-corner.left {
+            left: 5px;
+        }
+        .charts-container {
+            display: flex;
+            flex-wrap: wrap; /* This will allow the items to wrap onto the next line */
+            justify-content: space-around;
+            align-items: flex-start; /* Align to the top */
+            padding: 20px;
+        }
+        .chart {
+            flex-basis: 45%; /* Each chart will take up to 45% of the container width */
+        }
+        .logo-corner.right {
+            right: 5px;
+        }
+        #dataGraph {
+            margin-top: 50px; /* Adjust as needed to give space for the top logo */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Energy Management Tool</div>
+    <img src="/static/download.png" class="logo-corner left" alt="Kingsmill Industries Logo">
+    <img src="/static/download.png" class="logo-corner right" alt="Kingsmill Industries Logo">
+    <div class="charts-container">
+        <div class="chart">
+            <canvas id="dataGraph"></canvas>
+        </div>
+        <div class="chart">
+            <canvas id="energyUsageGraph"></canvas>
+        </div>
+        <div class="chart">
+            <canvas id="powerConsumptionGraph"></canvas>
+        </div>
+        <div class="chart">
+            <canvas id="energyTransferGraph"></canvas>
+        </div>
+    </div>
+    <script src="graph.js"></script>
+</body>
+</html>
